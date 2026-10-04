@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling>=1.27"]  # PEP 639 license expression needs 1.27+
+build-backend = "hatchling.build"
+
+[project]
+name = "nbu_payment_qr"
+version = "0.1.0"
+description = "NBU payment QR (BCD/UCT) payload builder, styled renderer and Ukrainian IBAN/EDRPOU validation"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.12"
+dependencies = [
+    "qrcode>=8.0",
+    "pillow>=10.3",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["nbu_payment_qr"]
